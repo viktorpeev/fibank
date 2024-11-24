@@ -1,0 +1,147 @@
+/* Wrapper for the entire table page */
+.datatableWrapper {
+  max-width: 1000px;
+  min-width: 750px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Header Section */
+.datatableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.datatableHeader h1 {
+  font-size: 28px;
+  color: #333333;
+}
+
+.logoutButton {
+  padding: 10px 15px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logoutButton:hover {
+  background-color: #c0392b;
+}
+
+/* Table Container */
+.tableContainer {
+  width: 100%;
+  min-height: 500px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+table th {
+  width: 20%;
+  background-color: #6a11cb;
+  color: white;
+  text-transform: uppercase;
+  padding: 12px;
+  text-align: left;
+}
+
+table td {
+  width: 20%;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  color: #555;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.loadingMessage,
+.errorMessage {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Pagination Section */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.paginationButton {
+  padding: 10px 15px;
+  background-color: #6a11cb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.paginationButton:hover {
+  background-color: #2575fc;
+  transform: translateY(-2px);
+}
+
+.paginationButton:disabled {
+  background-color: #cccccc;
+  color: #999999;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pageIndicator {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .datatableWrapper {
+    min-width: auto;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .logoutButton,
+  .paginationButton {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .pageIndicator {
+    font-size: 14px;
+  }
+}
